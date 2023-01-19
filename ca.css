@@ -8,6 +8,16 @@
     display: block;
 }
 
+ul {
+    display: block;
+    margin-top: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
 .navbar {
     display: block;
     height: 5rem;
@@ -103,6 +113,9 @@
 
 .intro {
     margin-left: 2rem;
+    font-weight: 700;
+    display: flex;
+    position: relative;
 }
 
 .second-container {
@@ -116,6 +129,7 @@
     height: auto;
     width: 50%;
     margin-left: 200px;
+    margin-right: 100px;
 }
 
 .girl-image {
@@ -129,13 +143,23 @@
     height: auto;
     width: 40%;
     margin-right: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.text{
+.internal-form {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
     font-weight: 700;
     font-size: 1.625rem;
     line-height: 1.5;
     padding-bottom: 1rem;
+    margin: 0;
 }
 
 .form-control {
@@ -154,7 +178,102 @@
     border: none;
 }
 
+.desc1 {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    color: #424242;
+}
+
+.desc {
+    font-weight: 400;
+    line-height: 1.5;
+    display: inline-block;
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.terms {
+    color: #3A10E5;
+    text-decoration: underline;
+}
+
+.desc2 {
+    font-weight: 400;
+}
+
 .btn-social {
-    padding: 12px;
-    margin: 6px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.cont-1 {
+    border-top: 1px solid #10162F;
+    display: block;
+}
+
+.cont-2 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.cont-3 {
+    padding-left: 2rem 0;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    width: 100%;
+}
+
+.box {
+    grid-column-end: span 6;
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+}
+
+.box-part {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 1rem;
+}
+
+.TextFooter-Heading {
+    font-size: 1rem;
+    margin-top: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.FooterLink-Items {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.FooterLink-Item {
+    margin: 0.15rem 0;
+    font-size: 1rem;
+
+}
+
+.Anchor {
+    background: none;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    white-space: initial;
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    color: #10162F;
+    background-color: transparent;
+}
+
+.FooterLink-Item a:hover {
+    color: blue;
+}
+
+.smallbox {
+    display: inline-block;
 }
