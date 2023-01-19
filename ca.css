@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    background-color: #FFF0e5;
+    font-family: "Apercu", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.div {
+    display: block;
+}
+
+.navbar {
+    display: block;
+    height: 5rem;
+    transition: background-color 150ms ease-in-out, border-bottom-color 150ms ease-in-out;
+    border-bottom: 1px solid #10162F;
+    width: 100%;
+    border-color: #FFF0E5;
+    background-color: #FFF0E5;
+    padding: 20px 79px;
+    overflow: hidden;
+}
+
+.navigation-div {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    box-shadow: none;
+}
+
+.photo {
+    position: relative;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+}
+
+.img-logo {
+    height: auto;
+    width: 200px;
+    margin-left: 60px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+}
+
+.list-item {
+    float: left;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.list-item a:hover {
+    color: blue;
+}
+
+.list-item a:active {
+    color: black;
+}
+
+.container-one {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 7.5rem;
+}
+
+.fa-solid,
+.fa-magnifying-glass {
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    display: inline-flex;
+    position: relative;
+    border-radius: 4px;
+    width: 30px;
+    height: 20px;
+    border-color: transparent;
+    color: #10162F;
+    border: #10162F;
+    white-space: nowrap;
+    text-decoration: none;
+    box-shadow: none;
+    align-items: center;
+}
+
+.intro {
+    margin-left: 2rem;
+}
+
+.second-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.big-picture {
+    height: auto;
+    width: 50%;
+    margin-left: 200px;
+}
+
+.girl-image {
+    height: 400px;
+    width: 500px;
+    border: 1px solid black;
+    box-shadow: -20px 20px 20px #000000;
+}
+
+.form {
+    height: auto;
+    width: 40%;
+    margin-right: 200px;
+}
+
+.text{
+    font-weight: 700;
+    font-size: 1.625rem;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+}
+
+.form-control {
+    padding: 10px;
+    width: 50%;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-social {
+    padding: 12px;
+    margin: 6px;
+}
