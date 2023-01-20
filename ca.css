@@ -8,6 +8,14 @@
     display: block;
 }
 
+h1 {
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 h2 {
     display: block;
     margin-block-start: 0.83em;
@@ -490,24 +498,185 @@ ul {
 
 .section-8 {
     --color-text: #FFFFFFFF;
-    --color-background: #10162F;
+    --color-background-current: #3A10E5;
+    --color-background-primary: #0A0D1C;
+    --color-background-selected: #34394C;
+    --color-background-disabled: #707382;
+    --color-background-hover: #585C6D;
+    --color-shadow-opaque: rgba(0, 0, 0, 0.75);
+    --color-shadow-solid: #000000;
     --color-primary: #FFD300;
     --color-primary-hover: #CCA900;
     --color-primary-reverse: #3A10E5;
-    color: #FFFFFFFF;
-    background-color: #3A10E5;
-    --color-interface: #FFD300;
-    --color-interface-hover: #CCA900;
-    --color-danger:#E85D7F;
-    --color-danger-hover: #DC5879;
     --color-secondary: #FFFFFFFF;
     --color-secondary-hover: #DBDCE0;
+    --color-danger: #E85D7F;
+    --color-danger-hover: #DC5879;
+    --color-interface: #FFD300;
+    --color-interface-hover: #CCA900;
+    color: #FFFFFFFF;
+    background-color: #3A10E5;
 }
 
-.section-8-grid{
+.section-8-grid {
     padding-top: 6rem;
     padding-bottom: 6rem;
     grid-template-columns: repeat(12, minmax(0, 1fr));
     display: grid;
     width: 100%;
+    background-color: #3A10E5;
+}
+
+.sec-8-1 {
+    grid-row: 1;
+    grid-column-end: span 4;
+    grid-column-start: 2;
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+    background-color: #3A10E5;
+}
+
+.Flexbox {
+    display: flex;
+    -webkit-box-pack: center;
+    align-items: center;
+    background-color: #3A10E5;
+}
+
+.fleximage {
+    max-width: 28.125rem;
+    max-height: 20.5rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    overflow: clip;
+}
+
+main {
+    display: block;
+}
+
+.FlexBox-OuterBox {
+    display: flex;
+    padding-bottom: 4rem;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    align-items: flex-end;
+    pointer-events: none;
+}
+
+.Box-InnerBox {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    pointer-events: all;
+}
+
+.Box-1 {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.Layout {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    width: 100%;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    row-gap: 2rem;
+}
+
+.show-1 {
+    grid-column-end: span 6;
+    display: flex;
+    min-height: 220px;
+    -webkit-box-pack: center;
+    align-items: center;
+    -webkit-box-align: center;
+    justify-content: center;
+}
+
+.upper {
+    position: relative;
+}
+
+.StyledDiagonalADense {
+    height: 25rem;
+    border-radius: 2px;
+    position: absolute;
+    width: 100%;
+    top: 16px;
+    left: -16px;
+    z-index: -1;
+}
+
+.Styled-image {
+    height: 25rem;
+    display: flex;
+    margin: auto;
+    border: 1px solid #10162F;
+    border-radius: 2px;
+}
+
+.show-2 {
+    grid-column-end: span 6;
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+}
+
+.boxing {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.boxing-flex {
+    width: 25rem;
+    max-width: 100%;
+    min-height: 31rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Text {
+    font-weight: 700;
+    font-size: 1.625rem;
+    margin: 0;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+}
+
+.StyledForm{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    margin-top: 0cm;
+}
+
+.LayoutGrid{
+    grid-column-gap: 2rem;
+    column-gap: min(calc(100% / 11), 2rem);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    width: 100%;
+    row-gap: 1rem;
+}
+
+.LayoutGrid-col{
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+    grid-row-end: span 1;
+    grid-column-end: span 12;
 }
