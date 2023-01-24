@@ -945,18 +945,19 @@ img {
     display: flex;
     min-height: 25rem;
     overflow: hidden;
-    border-color: #424242;
+    border: 1px solid #424242;
 }
 
 .Part-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     padding-left: 0.5rem;
-    border-color: #424242;
+    border: 1px solid #424242;
 }
 
 .Part-2 {
     display: flex;
+    border: 1px solid #424242;
 }
 
 .Part-3 {
@@ -965,7 +966,7 @@ img {
     flex-grow: 1;
     -webkit-box-align: stretch;
     align-items: stretch;
-    border-color: #424242;
+    border: 1px solid #424242;
     overflow: hidden;
 }
 
@@ -974,6 +975,7 @@ img {
     padding-left: 0.5rem;
     -webkit-box-pack: end;
     justify-content: flex-end;
+    border: 1px solid #424242;
 }
 
 .ResetElement5 {
@@ -999,6 +1001,32 @@ img {
     border-color: transparent;
 }
 
+.ResetElement5::before {
+    content: "";
+    transition: opacity 150ms linear 0s;
+    border: 2px solid;
+    position: absolute;
+    inset: -5px;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 6px;
+}
+
+.ResetElement5::after {
+    content: "";
+    transition: opacity 150ms ease-in 0s;
+    position: absolute;
+    inset: -2px;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 4px;
+}
+
+.ResetElement5:hover,
+.ResetElement6:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
 .Svg {
     width: calc(100% - 14px);
     height: calc(100% - 14px);
@@ -1017,7 +1045,8 @@ img {
     position: relative;
     flex-basis: 100%;
     visibility: visible;
-    border-color: #424242;
+    border-color: 1px solid #424242;
+    border-right: 1px solid #424242;
     transition: flex-basis 0.2s ease-out 0s;
 }
 
@@ -1123,12 +1152,46 @@ button {
     transition: flex-basis 0.2s ease-out 0s;
 }
 
+.Sec-3-1 {
+    position: absolute;
+    inset: 0px;
+    overflow: hidden;
+    z-index: -1;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.InnerSec-3-1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: all 0s ease 0s;
+    width: 100000px;
+    height: 100000px;
+}
+
+.InnerSec-3-2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transition: all 0s ease 0s;
+    width: 200%;
+    height: 200%;
+}
+
+.Written-3{
+    display: flex;
+    position: relative;
+    text-align: initial;
+    width: 100%;
+    height: 100%;
+}
+
 .Coding {
     width: 100%;
     --codelens-font-features_ee1f61: "liga" off, "calt" off;
     --code-editorInlayHintsFontFamily: Consolas, "Courier New", monospace;
 }
-
 
 .margin-view-overlays {
     position: absolute;
