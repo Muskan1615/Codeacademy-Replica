@@ -9,6 +9,10 @@ body {
     display: block;
 }
 
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 *,
 *::before,
 *::after {
@@ -17,7 +21,8 @@ body {
 
 div,
 footer,
-main {
+main,
+header {
     display: block;
 }
 
@@ -116,6 +121,10 @@ li {
     background-color: transparent;
 }
 
+.Anchor:hover {
+    color: blue;
+}
+
 .LegalCont {
     -webkit-box-align: baseline;
     align-items: center;
@@ -161,7 +170,7 @@ li {
     margin-right: 0.25rem;
     min-width: 1.75em;
     text-align: center;
-    background-color: #FFF0E5;
+    background-color: transparent;
 }
 
 .Footer-Grid {
@@ -480,12 +489,14 @@ img {
     margin-bottom: 0.5rem;
     font-weight: 700;
     line-height: 1.1;
+    width: 320px;
 }
 
 .SmallText {
     font-size: inherit;
     display: inline-block;
     margin: 0;
+    width: 321px;
 }
 
 .ResetElement {
@@ -518,6 +529,10 @@ img {
     margin-top: 1.5rem;
 }
 
+.ResetElement:hover {
+    background-color: #CCA900;
+}
+
 .ResetElement::before,
 .ResetElement1::before,
 .ResetElement2::before,
@@ -525,7 +540,10 @@ img {
 .ResetElement4::before,
 .ResetElement5::before,
 .ResetElement6::before,
-.ResetElement7::before {
+.ResetElement7::before,
+.ResetElement9::before,
+.HeadLogIn::before,
+.SearchButton::before {
     content: "";
     transition: opacity 150ms linear;
     position: absolute;
@@ -545,7 +563,10 @@ img {
 .ResetElement4::after,
 .ResetElement5::after,
 .ResetElement6::after,
-.ResetElement7::after {
+.ResetElement7::after,
+.ResetElement9::after,
+.HeadLogIn::after,
+.SearchButton::after {
     content: "";
     transition: opacity 150ms ease-in;
     position: absolute;
@@ -747,6 +768,7 @@ img {
     margin: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 430px;
 }
 
 .SmallText-7-1 {
@@ -755,6 +777,7 @@ img {
     font-size: 1rem;
     margin: 0;
     padding-bottom: 1rem;
+    width: 420px;
 }
 
 .ResetElement2 {
@@ -835,6 +858,7 @@ img {
     font-size: 1rem;
     margin: 0;
     padding-bottom: 1rem;
+    width: 401px;
 }
 
 .Flex-3-2 {
@@ -903,6 +927,11 @@ img {
     color: #FFD300;
     margin-top: 0.5rem;
     margin-left: 0.5rem;
+}
+
+.ResetElement3:hover,
+.ResetElement4:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .Editor {
@@ -1268,7 +1297,7 @@ pre {
 }
 
 .Svg-StyledDiagonalADense {
-    height: 25rem;
+    height: 28rem;
     position: absolute;
     width: 100%;
     top: 16px;
@@ -1278,7 +1307,7 @@ pre {
 }
 
 .StyledImage {
-    height: 25rem;
+    height: 28rem;
     display: flex;
     margin: auto;
     border: 1px solid #10162F;
@@ -1293,7 +1322,7 @@ pre {
 }
 
 .InnerFlex-1-2 {
-    width: 25rem;
+    width: 25.5rem;
     display: flex;
     flex-direction: column;
     max-width: 100%;
@@ -1306,6 +1335,7 @@ pre {
     margin: 0;
     line-height: 1.5;
     padding-bottom: 1rem;
+    width: 408px;
 }
 
 .StyledForm-1-2 {
@@ -1552,6 +1582,11 @@ p {
     background-color: #3A10E5;
 }
 
+.ResetElement7:hover,
+.ResetElement1:hover {
+    background-color: #5533FF;
+}
+
 .Gap {
     padding-top: 1rem;
 }
@@ -1590,6 +1625,10 @@ p {
     text-decoration: none;
 }
 
+.Authbar {
+    margin-top: -17px;
+}
+
 .Auth {
     font-weight: 700;
     font-size: 1rem;
@@ -1607,6 +1646,10 @@ p {
     justify-content: center;
     align-items: center;
     margin-right: 0.5rem;
+}
+
+.AuthButton:hover {
+    background-color: #F5FCFF;
 }
 
 .AuthButton {
@@ -1702,6 +1745,16 @@ p {
     position: relative;
 }
 
+.Sec-2content-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 4rem;
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+}
+
 .Sec-2-Text {
     font-weight: 400;
     line-height: 1.5;
@@ -1759,7 +1812,14 @@ p {
     z-index: 0;
 }
 
-.TabButton data-selected {
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+
+.TabButton[data-selected] {
     border-bottom-width: 4px;
     border-color: #FFD300;
     font-weight: bold;
@@ -1800,6 +1860,11 @@ p {
     font-size: 1rem;
 }
 
+.TabButton:hover,
+.TabButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 .Sec-2LayoutGrid {
     grid-template-columns: repeat(12, minmax(0px, 1fr));
     display: grid;
@@ -1815,6 +1880,18 @@ p {
 
 .StyledTrackLink {
     display: grid;
+}
+
+.GridItem:hover {
+    margin-top: -5px;
+    margin-right: -5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    box-shadow: -8px 8px 0px 1px #10162F;
+}
+
+.ResetElement2:hover {
+    background-color: #CCA900;
 }
 
 .CardWrapper {
@@ -1977,6 +2054,19 @@ a {
     justify-content: center;
 }
 
+.Sec-5-content-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    padding-top: 4rem;
+}
+
 .Sec-5-Head {
     padding-bottom: 0;
     font-size: 2.75rem;
@@ -2030,6 +2120,10 @@ a {
     height: 40px;
 }
 
+.ResetElement9:hover {
+    background-color: #E0E0E0;
+}
+
 .Sec-5-Lower {
     padding-bottom: 4rem;
     position: relative;
@@ -2037,7 +2131,7 @@ a {
 
 .Svg-StyledCheckerRegular {
     position: absolute;
-    height: 5rem;
+    height: 10rem;
     width: 100%;
     top: -1rem;
     z-index: -1;
@@ -2062,7 +2156,7 @@ a {
     width: 100%;
     row-gap: 2rem;
     grid-column-gap: 1rem;
-    column-gap: min(calc(100% / 11), 1rem);
+    column-gap: 1rem;
 }
 
 .Sec-5-Grid-1 {
@@ -2117,23 +2211,351 @@ a {
     line-height: 1.1;
     font-size: 1.375rem;
     margin: 0;
-    max-width: 309px;
+    max-width: 300px;
     padding-top: 0.5rem;
     padding-bottom: 0.25rem;
 }
 
-.Grid-Smallext {
+.Grid-SmallText {
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
     font-size: 0.875rem;
     margin: 0;
-    max-width: 279px;
+    max-width: 195px;
     font-family: "Suisse", "Apercu", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.PortraitImageStyles:hover,
-.Grid-BigText:hover,
-.Grid-Smallext:hover {
+.ResetElement10:hover {
     color: #3A10E5;
+}
+
+.MainHead {
+    position: sticky;
+    top: 0;
+    z-index: 15;
+}
+
+.MainNav {
+    display: block;
+    height: 5rem;
+    transition: background-color 150ms ease-in-out, border-bottom-color 150ms ease-in-out;
+    border-bottom: 1px solid #10162F;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    border-color: #FFF0E5;
+    background-color: #FFF0E5;
+}
+
+.MobileNav {
+    display: none;
+    height: 5rem;
+    transition: background-color 150ms ease-in-out, border-bottom-color 150ms ease-in-out;
+    border-bottom: 1px solid #10162F;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    border-color: #FFF0E5;
+    background-color: #FFF0E5;
+}
+
+.Head-content-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    box-shadow: none;
+}
+
+.HeadWrapper {
+    z-index: 14;
+}
+
+.Menubar {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+}
+
+.Nav-item {
+    display: flex;
+    position: relative;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Nav-item:first-of-type {
+    margin-left: 0;
+}
+
+.Nav-item:last-of-type {
+    margin-right: 0;
+}
+
+.HeadResetElement {
+    cursor: pointer;
+    background: none;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    white-space: initial;
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    color: #10162F;
+    background-color: transparent;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.HeadResetElement::before,
+.DropdownAnchor::before,
+.Business::before {
+    content: '';
+    border: 2px solid;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 4px;
+}
+
+.HeadResetElement:hover,
+.DropdownAnchor:hover {
+    color: #3A10E5;
+}
+
+.LogoSvg {
+    color: currentColor;
+    height: 27px;
+    vertical-align: text-bottom;
+}
+
+.DropdownAnchor {
+    cursor: pointer;
+    background: none;
+    text-decoration: none;
+    border: none;
+    font-size: inherit;
+    white-space: nowrap;
+    box-shadow: none;
+    display: flex;
+    position: relative;
+    color: #10162F;
+    background-color: transparent;
+    padding: 0.5rem 0;
+    text-align: center;
+    align-items: center;
+}
+
+.HeadStyledText {
+    font-size: inherit;
+    display: inline-block;
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
+.Svg-DropdownIcon {
+    width: 12px;
+    height: 12px;
+    margin-left: 0.3125rem;
+    transition: transform 0.35s ease-out;
+    transform-origin: center 0.3125rem;
+}
+
+.Business {
+    cursor: pointer;
+    background: none;
+    text-decoration: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    min-width: 0;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+    white-space: nowrap;
+    position: relative;
+    color: #10162F;
+    background-color: transparent;
+    margin-left: 0;
+    margin-right: 0;
+    border: none;
+    font-size: inherit;
+    box-shadow: none;
+}
+
+.Business:hover {
+    color: #3A10E5;
+}
+
+.HeadLogIn {
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    text-decoration: none;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    transition: border-color 150ms ease-in, color 150ms ease-in, background-color 150ms ease-in, box-shadow 150ms ease-in;
+    border: 2px solid #10162F;
+    white-space: nowrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    display: inline-flex;
+    position: relative;
+    border-radius: 4px;
+    border-color: transparent;
+    color: #10162F;
+    font-weight: 700;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+    min-width: 40px;
+    height: 40px;
+}
+
+.HeadLogIn:hover,
+.SearchButton:hover {
+    color: #3A10E5;
+    background-color: #E0E0E0;
+}
+
+.Nav-item-1 {
+    margin-right: 0.5rem;
+    margin-left: auto;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+}
+
+.SearchButton {
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    text-decoration: none;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    transition: border-color 150ms ease-in, color 150ms ease-in, background-color 150ms ease-in, box-shadow 150ms ease-in;
+    border: 2px solid #10162F;
+    white-space: nowrap;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    border-color: transparent;
+    color: #10162F;
+}
+
+.Magnify {
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+}
+
+.Menubar1 {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.Nav-item-2 {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.Nav-item-2:first-of-type {
+    margin-left: 0;
+}
+
+.Nav-item-3 {
+    display: flex;
+    margin-left: auto;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.Nav-item-4 {
+    display: flex;
+    margin-left: 0;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.Nav-item-4:last-of-type {
+    margin-right: 0;
+}
+
+.HeadSignIn {
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    text-decoration: none;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    transition: border-color 150ms ease-in, color 150ms ease-in, background-color 150ms ease-in, box-shadow 150ms ease-in;
+    border: 2px solid #10162F;
+    white-space: nowrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-align: center;
+    display: inline-flex;
+    position: relative;
+    border-radius: 4px;
+    border-color: transparent;
+    color: #10162F;
+    font-weight: 700;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.875rem;
+    min-width: 32px;
+    height: 32px;
+}
+
+.BlankBox {
+    display: none;
 }
