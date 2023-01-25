@@ -543,7 +543,8 @@ img {
 .ResetElement7::before,
 .ResetElement9::before,
 .HeadLogIn::before,
-.SearchButton::before {
+.SearchButton::before,
+.ResetElement-createButtonComponent::before {
     content: "";
     transition: opacity 150ms linear;
     position: absolute;
@@ -566,7 +567,8 @@ img {
 .ResetElement7::after,
 .ResetElement9::after,
 .HeadLogIn::after,
-.SearchButton::after {
+.SearchButton::after,
+.ResetElement-createButtonComponent::after {
     content: "";
     transition: opacity 150ms ease-in;
     position: absolute;
@@ -832,7 +834,7 @@ img {
 }
 
 .Sec-3-1 {
-    padding-top: 0;
+    padding-top: 2rem;
     grid-area: editor;
 }
 
@@ -952,12 +954,11 @@ img {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     padding-left: 0.5rem;
-    border: 1px solid #424242;
+    border-bottom: 1px solid #424242;
 }
 
 .Part-2 {
     display: flex;
-    border: 1px solid #424242;
 }
 
 .Part-3 {
@@ -966,8 +967,9 @@ img {
     flex-grow: 1;
     -webkit-box-align: stretch;
     align-items: stretch;
-    border: 1px solid #424242;
     overflow: hidden;
+    border-top: 1px solid #424242;
+    border-bottom: 1px solid #424242;
 }
 
 .Part-4 {
@@ -975,7 +977,6 @@ img {
     padding-left: 0.5rem;
     -webkit-box-pack: end;
     justify-content: flex-end;
-    border: 1px solid #424242;
 }
 
 .ResetElement5 {
@@ -1030,8 +1031,6 @@ img {
 .Svg {
     width: calc(100% - 14px);
     height: calc(100% - 14px);
-    overflow: hidden;
-    fill: currentColor;
 }
 
 .Input-1 {
@@ -1120,30 +1119,22 @@ button {
 
 .Svg-LeftDrawerIcon,
 .Svg-RightDrawerIcon {
+    transform: rotateZ(0deg);
     width: calc(100% - 14px);
     height: calc(100% - 14px);
     transition: transform 0.2s ease-in-out 0s;
+}
+
+.Svg-LeftDrawerIcon:hover,
+.Svg-RightDrawerIcon:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .DrawerLabel {
     padding: 0.875rem 0.5rem;
 }
 
-.Flex-Part-1 {
-    display: flex;
-    border-color: #424242;
-    overflow: hidden;
-    border-right-width: thin;
-    border-right-style: solid;
-    -webkit-box-flex: 0;
-    flex-grow: 0;
-    position: relative;
-    flex-basis: 100%;
-    visibility: visible;
-    transition: flex-basis 0.2s ease-out 0s;
-}
-
-.Flex-Part-2 {
+.Part-3-2 {
     display: flex;
     overflow: hidden;
     position: relative;
@@ -1152,162 +1143,7 @@ button {
     transition: flex-basis 0.2s ease-out 0s;
 }
 
-.Sec-3-1 {
-    position: absolute;
-    inset: 0px;
-    overflow: hidden;
-    z-index: -1;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.InnerSec-3-1 {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    transition: all 0s ease 0s;
-    width: 100000px;
-    height: 100000px;
-}
-
-.InnerSec-3-2 {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    transition: all 0s ease 0s;
-    width: 200%;
-    height: 200%;
-}
-
-.Written-3{
-    display: flex;
-    position: relative;
-    text-align: initial;
-    width: 100%;
-    height: 100%;
-}
-
-.Coding {
-    width: 100%;
-    --codelens-font-features_ee1f61: "liga" off, "calt" off;
-    --code-editorInlayHintsFontFamily: Consolas, "Courier New", monospace;
-}
-
-.margin-view-overlays {
-    position: absolute;
-    width: 64px;
-    font-family: Consolas, "Courier New", monospace;
-    font-weight: normal;
-    font-size: 14px;
-    font-feature-settings: "liga" 0, "calt" 0;
-    line-height: 19px;
-    letter-spacing: 0px;
-    height: 534px;
-}
-
-.view-lines monaco-mouse-cursor-text {
-    position: absolute;
-    font-family: Consolas, "Courier New", monospace;
-    font-weight: normal;
-    font-size: 14px;
-    font-feature-settings: "liga" 0, "calt" 0;
-    line-height: 19px;
-    letter-spacing: 0px;
-    width: 315px;
-    height: 534px;
-}
-
-.cursor monaco-mouse-cursor-text {
-    height: 19px;
-    top: 0px;
-    left: 0px;
-    font-family: Consolas, "Courier New", monospace;
-    font-weight: normal;
-    font-size: 14px;
-    font-feature-settings: "liga" 0, "calt" 0;
-    line-height: 19px;
-    letter-spacing: 0px;
-    display: block;
-    visibility: hidden;
-    width: 2px;
-}
-
-.monaco-editor .cursors-layer .cursor {
-    background-color: #aeafad;
-    border-color: #aeafad;
-    color: #515052;
-}
-
-.monaco-editor .cursors-layer>.cursor {
-    position: absolute;
-    overflow: hidden;
-}
-
-.monaco-mouse-cursor-text {
-    cursor: text;
-}
-
-.rename-input {
-    font-family: Consolas, "Courier New", monospace;
-    font-weight: normal;
-    font-size: 14px;
-    background-color: rgb(60, 60, 60);
-    border-width: 0px;
-    border-style: none;
-}
-
-.monaco-editor .rename-box .rename-input {
-    padding: 3px;
-    width: calc(100% - 6px);
-}
-
-.inputarea monaco-mouse-cursor-text {
-    font-family: Consolas, "Courier New", monospace;
-    font-weight: normal;
-    font-size: 14px;
-    font-feature-settings: "liga" 0, "calt" 0;
-    line-height: 19px;
-    letter-spacing: 0px;
-    top: 0px;
-    left: 64px;
-    width: 1px;
-    height: 1px;
-}
-
-.monaco-editor .inputarea {
-    min-width: 0;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    outline: none !important;
-    resize: none;
-    border: none;
-    overflow: hidden;
-    color: transparent;
-    background-color: transparent;
-}
-
-textarea Attributes Style {
-    white-space: pre;
-    overflow-wrap: normal;
-}
-
-textarea {
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    appearance: auto;
-    -webkit-rtl-ordering: logical;
-    word-spacing: normal;
-    column-count: initial !important;
-}
-
-.Output1 {
+.Display-3-2 {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -1322,6 +1158,21 @@ textarea {
 pre {
     display: block;
     white-space: pre;
+}
+
+.Part-3-1 {
+    display: flex;
+    border-color: #424242;
+    overflow: hidden;
+    border-right-width: thin;
+    border-right-style: solid;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    position: relative;
+    flex-basis: 100%;
+    visibility: visible;
+    transition: flex-basis 0.2s ease-out 0s;
+    background-color: rgba(121, 121, 121, 0.5);
 }
 
 .Sec-Box-1 {
@@ -1953,7 +1804,8 @@ html [type='button'],
     box-shadow: -8px 8px 0px 1px #10162F;
 }
 
-.ResetElement2:hover {
+.ResetElement2:hover,
+.ResetElement-createButtonComponent:hover {
     background-color: #CCA900;
 }
 
@@ -2370,6 +2222,11 @@ a {
     margin-right: 0;
 }
 
+.Nav-item:hover {
+    color: #3A10E5;
+    text-emphasis: initial;
+}
+
 .HeadResetElement {
     cursor: pointer;
     background: none;
@@ -2428,6 +2285,10 @@ a {
     padding: 0.5rem 0;
     text-align: center;
     align-items: center;
+}
+
+.DropdownAnchor:hover+.DropMenu {
+    display: block;
 }
 
 .HeadStyledText {
@@ -2621,4 +2482,369 @@ a {
 
 .BlankBox {
     display: none;
+}
+
+.DropMenu {
+    top: 3.5rem;
+    min-width: 64rem;
+    left: -9rem;
+    border-width: 1px;
+    height: fit-content;
+    border-style: solid;
+    border-color: #C3C5CB;
+    overflow: hidden;
+    position: absolute;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+.DropMenuGrid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    width: 100%;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul ul {
+    margin-bottom: 0;
+    list-style-type: circle;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+ul {
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.Catalog-1 {
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+    grid-column-end: span 12;
+    border-bottom: 1px solid #10162F;
+    border-color: #C3C5CB;
+}
+
+.Catalog-2 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    grid-column-end: span 12;
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+}
+
+.Catalog-2-Inner {
+    display: flex;
+    -webkit-box-align: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.CatalogIcon {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.CatalogPhoto {
+    margin-right: 0.75rem;
+}
+
+.ResetElement-Anchor {
+    cursor: pointer;
+    text-align: center;
+    margin-left: 1rem;
+    padding-top: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    color: #3A10E5;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.ResetElement-Anchor::before,
+.Anchor-AnchorBase::before,
+.ViewLink::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    z-index: 0;
+    opacity: 0;
+    border-radius: 4px;
+}
+
+.ResetElement-Anchor:hover {
+    text-decoration: underline;
+    color: #3A10E5;
+}
+
+.CatalogGrid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    width: 100%;
+}
+
+.CatalogLeft {
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+    grid-column-end: span 3;
+}
+
+.CatalogRight {
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    grid-column-end: span 8;
+}
+
+.InnerCatalog {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    --color-text: #FFFFFF;
+    --color-text-accent: #FFF0E5;
+    --color-text-disabled: #DBDCE0;
+    --color-feedback-error: #E85D7F;
+    --color-feedback-success: #AEE938;
+    --color-feedback-warning: #FFFAE5;
+    --color-background: #10162F;
+    --color-background-contrast: #000000;
+    --color-background-current: #10162F;
+    --color-background-primary: #0A0D1C;
+    --color-background-selected: #34394C;
+    --color-background-disabled: #707382;
+    --color-background-hover: #585C6D;
+    --color-shadow-opaque: rgba(0, 0, 0, 0.75);
+    --color-shadow-solid: #000000;
+    --color-primary: #FFD300;
+    --color-primary-hover: #CCA900;
+    --color-primary-reverse: #3A10E5;
+    --color-secondary: #FFFFFFFF;
+    --color-secondary-hover: #DBDCE0;
+    --color-danger: #E85D7F;
+    --color-danger-hover: #DC5879;
+    --color-interface: #FFD300;
+    --color-interface-hover: #CCA900;
+    color: #F5FCFF;
+    background-color: #10162F;
+}
+
+.DescriptionSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.DescriptionHead {
+    line-height: 1.1;
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.DescriptionText {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.ResetElement-createButtonComponent {
+    margin-top: 6rem;
+    text-decoration: none;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    transition: border-color 150ms ease-in, color 150ms ease-in, background-color 150ms ease-in, box-shadow 150ms ease-in;
+    border: 2px solid #FFFFFF;
+    border-color: transparent;
+    white-space: nowrap;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    border-radius: 4px;
+    font-weight: 700;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+    min-width: 40px;
+    height: 40px;
+    color: #10162F;
+    background-color: #FFD300;
+    max-width: 170px;
+}
+
+.RightGrid {
+    display: grid;
+    grid-template-areas:
+        'language language subject'
+        'language language subject'
+        'language language subject'
+        'language language subject'
+        'language language subject'
+        'language language subject';
+}
+
+.GridLanguage {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-auto-flow: column;
+    grid-area: language;
+    display: grid;
+}
+
+.LanguageType {
+    width: 12rem;
+    min-height: 32px;
+}
+
+.Anchor-AnchorBase {
+    cursor: pointer;
+    background: none;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    white-space: initial;
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    color: #10162F;
+    background-color: transparent;
+}
+
+.Anchor-AnchorBase:hover,
+.Anchor1:hover {
+    color: #3A10E5;
+}
+
+.Blink {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    grid-area: space;
+    display: none;
+}
+
+.GridSubject {
+    grid-area: subject;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.SubjectType {
+    width: 12rem;
+    min-height: 36px;
+}
+
+.GridJob {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    width: 100%;
+}
+
+.StyledAnchorColumn {
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+    grid-column-end: span 4;
+    padding-bottom: 1rem;
+}
+
+.DropMenu1 {
+    top: 3.5rem;
+    min-width: 64rem;
+    left: -14.5rem;
+    border-width: 1px;
+    height: fit-content;
+    border-style: solid;
+    border-color: #C3C5CB;
+    overflow: hidden;
+    position: absolute;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+.DropdownAnchor:hover+.DropMenu1 {
+    display: block;
+}
+
+.ViewLink {
+    margin-top: 1.5rem;
+    text-align: left;
+    border: none;
+    padding: 0;
+    white-space: nowrap;
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    color: #FFD300;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 0.875rem;
+    cursor: pointer;
+    background: none;
+    text-decoration: none;
+}
+
+.ViewLink:hover {
+    color: #FFD300;
+    text-decoration: underline;
+}
+
+.CatalogRight1 {
+    grid-column-end: span 8;
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+}
+
+.RightGrid1 {
+    padding-left: 3rem;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.Column {
+    grid-column-end: span 4;
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+}
+
+.Anchor1 {
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    white-space: initial;
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    color: #10162F;
+    background-color: transparent;
+    padding-bottom: 0;
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
 }
