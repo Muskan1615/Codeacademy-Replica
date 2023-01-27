@@ -96,8 +96,8 @@ li {
 }
 
 .content-container {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -105,6 +105,27 @@ li {
     width: 100%;
     height: 100%;
     max-width: 1440px;
+}
+
+@media only screen and (min-width:1200px) {
+    .content-container {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1199px) {
+    .content-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .content-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .Anchor {
@@ -543,7 +564,9 @@ img {
 .ResetElement7::before,
 .ResetElement9::before,
 .HeadLogIn::before,
+.HeadSignIn::before,
 .SearchButton::before,
+.SearchButton1::before,
 .ResetElement-createButtonComponent::before {
     content: "";
     transition: opacity 150ms linear;
@@ -567,7 +590,9 @@ img {
 .ResetElement7::after,
 .ResetElement9::after,
 .HeadLogIn::after,
+.HeadSignIn::after,
 .SearchButton::after,
+.SearchButton1::after,
 .ResetElement-createButtonComponent::after {
     content: "";
     transition: opacity 150ms ease-in;
@@ -1176,8 +1201,19 @@ pre {
 }
 
 .Sec-Box-1 {
-    padding-bottom: 2rem;
     padding-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .Sec-Box-1 {
+        padding-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    .Sec-Box-1 {
+        padding-bottom: 0;
+    }
 }
 
 .Section-1-Grid {
@@ -1186,11 +1222,15 @@ pre {
     width: 100%;
     padding-bottom: 2rem;
     row-gap: 2rem;
-    padding-top: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .Section-1-Grid {
+        padding-top: 2rem;
+    }
 }
 
 .Sec-1-1 {
-    grid-column-end: span 6;
     display: flex;
     min-height: 220px;
     -webkit-box-pack: center;
@@ -1200,10 +1240,45 @@ pre {
     -webkit-box-align: center;
 }
 
+@media only screen and (min-width: 768px) {
+    .Sec-1-1 {
+        grid-column-end: span 6;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .Sec-1-1 {
+        grid-column-end: span 12;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .Sec-1-1 {
+        grid-column-end: span 12;
+    }
+}
+
 .Sec-1-2 {
-    grid-column-end: span 6;
     grid-template-columns: minmax(0, 1fr);
     display: grid;
+}
+
+@media only screen and (min-width: 768px) {
+    .Sec-1-2 {
+        grid-column-end: span 6;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .Sec-1-2 {
+        grid-column-end: span 12;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .Sec-1-2 {
+        grid-column-end: span 12;
+    }
 }
 
 .PictureBox {
@@ -1211,7 +1286,7 @@ pre {
 }
 
 .Svg-StyledDiagonalADense {
-    height: 28rem;
+    height: 100%;
     position: absolute;
     width: 100%;
     top: 16px;
@@ -1220,12 +1295,48 @@ pre {
     border-radius: 2px;
 }
 
+@media only screen and (min-width: 1200px) {
+    .Svg-StyledDiagonalADense {
+        height: 25rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1199px) {
+    .Svg-StyledDiagonalADense {
+        height: 20rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .Svg-StyledDiagonalADense {
+        height: 14rem;
+    }
+}
+
 .StyledImage {
-    height: 28rem;
+    height: 12rem;
     display: flex;
     margin: auto;
     border: 1px solid #10162F;
     border-radius: 2px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .StyledImage {
+        height: 25rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width:1199px) {
+    .StyledImage {
+        height: 20rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1023px) {
+    .StyledImage {
+        height: 14rem;
+    }
 }
 
 .Flex-1-2 {
@@ -1236,11 +1347,17 @@ pre {
 }
 
 .InnerFlex-1-2 {
-    width: 25.5rem;
+    width: 22rem;
     display: flex;
     flex-direction: column;
     max-width: 100%;
     min-height: 31rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .InnerFlex-1-2 {
+        width: 25rem;
+    }
 }
 
 .Text-1-2 {
@@ -1249,12 +1366,6 @@ pre {
     margin: 0;
     line-height: 1.5;
     padding-bottom: 1rem;
-    width: 408px;
-}
-
-.StyledForm-1-2 {
-    display: flex;
-    flex-direction: column;
 }
 
 form {
@@ -1262,13 +1373,23 @@ form {
     margin-top: 0em;
 }
 
+.StyledForm-1-2 {
+    display: flex;
+    flex-direction: column;
+}
+
 .FormGrid {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     display: grid;
     width: 100%;
     row-gap: 1rem;
-    column-gap: min(calc(100% / 11), 2rem);
-    grid-column-gap: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .FormGrid {
+        grid-column-gap: 2rem;
+        column-gap: min(calc(100% / 11), 2rem);
+    }
 }
 
 .FormPart-1 {
@@ -1454,7 +1575,7 @@ p {
     position: relative;
 }
 
-.FormPart-4 {
+.FormPart-3 {
     grid-template-columns: minmax(0, 1fr);
     display: grid;
     grid-column-end: span 12;
@@ -1559,7 +1680,10 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 0.5rem;
+}
+
+.btnButton+.btnButton {
+    margin-left: 0.5rem;
 }
 
 .AuthButton:hover {
@@ -1660,13 +1784,34 @@ p {
 }
 
 .Sec-2content-container {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 4rem;
     margin: 0px auto;
     width: 100%;
     height: 100%;
     max-width: 1440px;
+}
+
+@media only screen and (min-width:1200px) {
+    .Sec-2content-container {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1199px) {
+    .Sec-2content-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:767px) {
+    .Sec-2content-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .Sec-2-Text {
@@ -1686,8 +1831,10 @@ p {
     text-align: center;
 }
 
-.Sec-2-Box {
-    display: block;
+@media only screen and (min-width: 1024px) {
+    .Sec-2-Box {
+        display: block;
+    }
 }
 
 .Sec-2-InnerBox {
@@ -1796,6 +1943,13 @@ html [type='button'],
     display: grid;
 }
 
+.OneMore,
+.OneMore:active,
+.OneMore:focus,
+.OneMore:hover {
+    text-decoration: none;
+}
+
 .GridItem:hover {
     margin-top: -5px;
     margin-right: -5px;
@@ -1810,7 +1964,6 @@ html [type='button'],
 }
 
 .CardWrapper {
-    flex-direction: column;
     --color-text: #10162F;
     --color-text-accent: #0A0D1C;
     --color-text-disabled: #707382;
@@ -1846,9 +1999,20 @@ html [type='button'],
     transition: box-shadow 200ms ease 0s, transform 200ms ease 0s;
 }
 
+@media only screen and (min-width: 480px) {
+    .CardWrapper {
+        flex-direction: column;
+    }
+}
+
 .Sec-2Box {
-    padding-right: 0px;
     max-width: none;
+}
+
+@media only screen and (min-width: 480px) {
+    .Sec-2Box {
+        padding-right: 0px;
+    }
 }
 
 .Box-Text {
@@ -1967,6 +2131,324 @@ a {
     margin-top: 2rem;
     -webkit-box-pack: center;
     justify-content: center;
+}
+
+@media only screen and (max-width:1023px) {
+    .Sec-2-Box {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1023px) {
+    .Sec-2-Box-1 {
+        display: block;
+    }
+}
+
+.Sec-2-InnerBox-1 {
+    grid-template-columns: repeat(12, minmax(0px, 1fr));
+    display: grid;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2rem min(9.09091%, 2rem);
+}
+
+@media only screen and (min-width: 768px) {
+    .Sec-2-InnerBox-1 {
+        row-gap: 0.5rem;
+    }
+}
+
+.Partition {
+    grid-template-columns: minmax(0, 1fr);
+    display: grid;
+    grid-column-end: span 12;
+}
+
+.Show {
+    display: grid;
+}
+
+@media only screen and (min-width: 480px) {
+    .Show {
+        display: none;
+    }
+}
+
+.Newlist {
+    display: grid;
+    padding: 0px;
+    width: 97%;
+    grid-template-columns: minmax(0px, 1fr);
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+@media only screen and (min-width: 480px) {
+    .Newlist {
+        width: 100%;
+    }
+}
+
+.NewlistItem {
+    display: flex;
+    border-bottom: 1px solid #FFFFFF;
+    height: 100%;
+    flex-direction: column;
+}
+
+.Anchor-AnchorBase-StyledAnchor {
+    border: none;
+    padding: 2rem 0px;
+    font-size: inherit;
+    white-space: initial;
+    box-shadow: none;
+    display: inline-block;
+    position: relative;
+    color: #FFFFFF;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+@media only screen and (min-width: 480px) {
+    .Anchor-AnchorBase-StyledAnchor {
+        transition: all 0.3s ease 0s;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .ExFlex {
+        width: 100%;
+    }
+}
+
+.ExFlex {
+    display: flex;
+    flex: 1 1 0%;
+    width: 97%;
+    flex-direction: column;
+}
+
+.ExFlexBox {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.ExText {
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0px;
+    font-size: 1.25rem;
+}
+
+.ExBoxText {
+    display: flex;
+}
+
+.Svg-StyledChevronDownIcon {
+    width: 1rem;
+    height: 1rem;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 480px) {
+    .Gametext {
+        display: initial;
+    }
+}
+
+.Gametext {
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0px;
+    display: initial;
+    max-width: 386px;
+    font-size: 1rem;
+    white-space: normal;
+    padding-top: 0.5rem;
+}
+
+@media only screen and (min-width: 480px) {
+    .FunBox {
+        display: initial;
+    }
+}
+
+.FunBox {
+    display: initial;
+}
+
+.FunBox1 {
+    display: none;
+    position: relative;
+}
+
+@media only screen and (min-width: 480px) {
+    .FunBox1 {
+        display: block;
+    }
+}
+
+.Svg-WiderPattern {
+    height: 25%;
+    position: absolute;
+    bottom: 10px;
+    margin-left: -50%;
+    width: 200%;
+    color: #3A10E5;
+}
+
+.FunLayoutGrid {
+    grid-template-columns: repeat(12, minmax(0px, 1fr));
+    display: grid;
+    width: 100%;
+    padding: 1rem 0px 2rem;
+    gap: 1rem min(9.09091%, 1rem);
+}
+
+@media only screen and (min-width: 768px) {
+    .FunLayoutGrid {
+        padding-bottom: 3rem;
+        gap: 3rem min(9.09091%, 3rem);
+    }
+}
+
+.FunColumn {
+    grid-template-columns: minmax(0px, 1fr);
+    display: grid;
+    grid-column-end: span 12;
+}
+
+@media only screen and (min-width: 768px) {
+    .FunColumn {
+        grid-column-end: span 6;
+    }
+}
+
+.FunStyledTrackLink {
+    display: grid;
+}
+
+.noUnderline,
+.noUnderline:active,
+.noUnderline:focus,
+.noUnderline:hover {
+    text-decoration: none;
+}
+
+.FunBox2 {
+    display: block;
+    position: relative;
+}
+
+@media only screen and (min-width: 480px) {
+    .FunBox2 {
+        display: none;
+    }
+}
+
+.Svg-BackgroundPattern {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-14px);
+    color: #3A10E5;
+}
+
+.GoodBox {
+    padding: 0px;
+}
+
+.InnerGoodBox {
+    position: relative;
+}
+
+.ScrollContainer {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    width: 100vw;
+    padding: 1rem 1rem 1rem 0px;
+    transform: translateX(-1rem);
+    scroll-padding: 1rem;
+}
+
+.ScrollItemWrapper {
+    scroll-snap-align: start;
+}
+
+.ScrollItemWrapper[aria-hidden="true"] {
+    visibility: hidden;
+}
+
+.MobileCard {
+    display: flex;
+    min-width: 14.3125rem;
+    margin: 0px 1rem;
+}
+
+.TrackLink {
+    display: flex;
+}
+
+.FunBox3 {
+    grid-template-columns: minmax(0px, 1fr);
+    display: grid;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    grid-column-end: span 12;
+}
+
+.FunResetElement {
+    cursor: pointer;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    font-weight: 700;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+    min-width: 40px;
+    height: 40px;
+    color: #10162F;
+    width: min-content;
+    background: none;
+    text-decoration: none;
+    transition: border-color 150ms ease-in 0s, color 150ms ease-in 0s, background-color 150ms ease-in 0s, box-shadow 150ms ease-in 0s;
+    border-color: transparent;
+    border-radius: 4px;
+}
+
+.FunResetElement:hover {
+    background-color: #CCA900;
+}
+
+@media only screen and (min-width:480px) {
+    .FunResetElement {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.Svg-HyperPattern-Dense {
+    width: 100%;
+    height: 48px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: #3A10E5;
 }
 
 .Sec-5-content-container {
@@ -2161,6 +2643,7 @@ a {
     z-index: 2;
     border-color: #FFF0E5;
     background-color: #FFF0E5;
+    max-width: 1440px;
 }
 
 .MobileNav {
@@ -2173,6 +2656,19 @@ a {
     z-index: 2;
     border-color: #FFF0E5;
     background-color: #FFF0E5;
+    max-width: 1199px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .MobileNav {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .MainNav {
+        display: none;
+    }
 }
 
 .Head-content-container {
@@ -2189,6 +2685,20 @@ a {
     height: 100%;
     max-width: 1440px;
     box-shadow: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .Head-content-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .Head-content-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .HeadWrapper {
@@ -2214,12 +2724,48 @@ a {
     flex-direction: column;
 }
 
-.Nav-item:first-of-type {
-    margin-left: 0;
+.Nav-item-new {
+    display: flex;
+    position: relative;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.Nav-item:last-of-type {
-    margin-right: 0;
+.Nav-item-SignIn {
+    display: flex;
+    position: relative;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media only screen and (min-width:1024px) {
+    .Nav-item:first-of-type {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .Nav-item-new {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .Magnify {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .Nav-item-SignIn {
+        margin-right: 0;
+    }
 }
 
 .Nav-item:hover {
@@ -2363,7 +2909,10 @@ a {
 }
 
 .HeadLogIn:hover,
-.SearchButton:hover {
+.SearchButton:hover,
+.SearchButton1:hover,
+.HeadSignIn:hover,
+.Magnify1:hover {
     color: #3A10E5;
     background-color: #E0E0E0;
 }
@@ -2425,8 +2974,16 @@ a {
     position: relative;
 }
 
-.Nav-item-2:first-of-type {
-    margin-left: 0;
+@media only screen and (min-width:1024px) {
+    .Nav-item-2:first-of-type {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (min-width:480px) {
+    .Nav-item-2 {
+        display: flex;
+    }
 }
 
 .Nav-item-3 {
@@ -2438,6 +2995,12 @@ a {
     position: relative;
 }
 
+@media only screen and (min-width:480px) {
+    .Nav-item-3 {
+        display: flex;
+    }
+}
+
 .Nav-item-4 {
     display: flex;
     margin-left: 0;
@@ -2447,8 +3010,10 @@ a {
     position: relative;
 }
 
-.Nav-item-4:last-of-type {
-    margin-right: 0;
+@media only screen and (min-width:1024px) {
+    .Nav-item-4:last-of-type {
+        margin-right: 0;
+    }
 }
 
 .HeadSignIn {
@@ -2478,6 +3043,35 @@ a {
     font-size: 0.875rem;
     min-width: 32px;
     height: 32px;
+}
+
+.SearchButton1 {
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    text-decoration: none;
+    box-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    transition: border-color 150ms ease-in, color 150ms ease-in, background-color 150ms ease-in, box-shadow 150ms ease-in;
+    border: 2px solid #10162F;
+    white-space: nowrap;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    border-color: transparent;
+    color: #10162F;
+}
+
+.Magnify1 {
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
 }
 
 .BlankBox {
@@ -2575,7 +3169,8 @@ ul {
 
 .ResetElement-Anchor::before,
 .Anchor-AnchorBase::before,
-.ViewLink::before {
+.ViewLink::before,
+.NewAnchor::before {
     content: "";
     position: absolute;
     top: -4px;
@@ -2736,7 +3331,8 @@ ul {
 }
 
 .Anchor-AnchorBase:hover,
-.Anchor1:hover {
+.Anchor1:hover,
+.NewAnchor:hover {
     color: #3A10E5;
 }
 
@@ -2812,6 +3408,13 @@ ul {
     text-decoration: underline;
 }
 
+.InlineText {
+    display: inline-block;
+    margin: 0;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
 .CatalogRight1 {
     grid-column-end: span 8;
     grid-template-columns: minmax(0, 1fr);
@@ -2847,4 +3450,125 @@ ul {
     cursor: pointer;
     text-decoration: none;
     background: none;
+}
+
+.DisplayFlex {
+    display: flex;
+}
+
+.DisplayHead {
+    line-height: 1.1;
+    margin: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+.DisplayText {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.875rem;
+    padding-bottom: 1.5rem;
+    padding-right: 2.5rem;
+}
+
+.Badge {
+    width: min-content;
+    border-radius: 40px;
+    color: #10162F;
+    background-color: #FFd300;
+    font-size: 10px;
+    height: 1rem;
+    -webkit-box-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-family: "Suisse", "Apercu", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+    -webkit-box-pack: center;
+    margin-left: 0.5rem;
+}
+
+.CommunityMenu {
+    top: 2.25rem;
+    width: 155.25px;
+    border-width: 1px;
+    height: 304px;
+    border-style: solid;
+    border-color: #C3C5CB;
+    overflow: hidden;
+    position: absolute;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+.CommunityContainer {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1440px;
+}
+
+.StyledList-StyledLinkSection {
+    list-style: none;
+    padding: 0.75rem 0;
+    position: absolute;
+}
+
+.NewAnchor {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    display: flex;
+    min-width: 0;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+    white-space: nowrap;
+    position: relative;
+    color: #10162F;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    background: none;
+    cursor: pointer;
+}
+
+.DropdownAnchor:hover+.CommunityMenu {
+    display: block;
+}
+
+.PricingMenu {
+    top: 2.25rem;
+    width: 149.219px;
+    border-width: 1px;
+    height: 192px;
+    border-style: solid;
+    border-color: #C3C5CB;
+    overflow: hidden;
+    position: absolute;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+.DropdownAnchor:hover+.PricingMenu {
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    .root {
+        --elements-headerHeight: 5rem;
+    }
 }
