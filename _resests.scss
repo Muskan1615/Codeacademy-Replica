@@ -1,0 +1,18 @@
+$menu-component-height: 17px;
+$f-weight: 600;
+$f-size: 14px;
+$f-color: #1F4173;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    position: relative;
+    width: 100vw;
+    height: 2757px;
+    display: flex;
+    flex-direction: row;
+}

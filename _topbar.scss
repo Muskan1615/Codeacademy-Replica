@@ -1,0 +1,145 @@
+.topbar {
+    width: 100%;
+    height: 70px;
+    background-color: #FFF;
+    display: flex;
+}
+
+.first-3 {
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    .comp-gap {
+        margin-left: 35%;
+    }
+
+    .comp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .first-3-img {
+            width: 25px;
+            height: 18px;
+            padding-right: 9px;
+        }
+
+        .first-3-component {
+            font-family: 'proximanova';
+            font-size: $f-size;
+            font-weight: $f-weight;
+            color: $f-color;
+            opacity: 50%;
+            width: max-content;
+            padding-right: 20px;
+        }
+    }
+}
+
+.second-3 {
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    .comp-gap {
+        margin-left: 35%;
+    }
+
+    .comp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .first-3-img {
+            width: 25px;
+            height: 19px;
+            padding-right: 9px;
+        }
+
+        .first-3-component {
+            font-family: 'proximanova';
+            font-size: $f-size;
+            font-weight: $f-weight;
+            color: $f-color;
+            opacity: 50%;
+        }
+    }
+
+    .task {
+        font-family: 'proximanova';
+        font-weight: 400;
+        font-size: 13px;
+        color: $f-color;
+    }
+}
+
+.searchbar {
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .searchtag {
+        margin-left: 10%;
+        height: 70%;
+        width: 100%;
+        background-color: #1F4173;
+        border-radius: 5px;
+        opacity: 0.05;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .search-vector {
+            width: 20px;
+            height: 50%;
+        }
+
+        .search {
+            font-family: 'proximanova';
+            font-size: 13px;
+            font-weight: 400;
+            color: red;
+        }
+    }
+}
+
+.person-details {
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .bellgap {
+        padding-right: 10%;
+
+        .position {
+            position: absolute;
+            top: .8%;
+            right: 17.2%;
+            padding: 4px 4px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    }
+
+    .task {
+        font-size: $f-size;
+        font-family: 'proximanova', sans-serif;
+        font-weight: $f-weight;
+        color: $f-color;
+    }
+
+    .person-gap {
+        padding-right: 9px;
+    }
+
+    .vecgap {
+        padding-right: 15%;
+    }
+}

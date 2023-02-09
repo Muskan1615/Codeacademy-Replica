@@ -1,0 +1,121 @@
+@import "./fonts";
+
+.sidebar {
+    width: 13%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+}
+
+.logo {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-content {
+    color: #0043F1;
+    font-family: 'proximanova', sans-serif;
+    align-items: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.vector {
+    position: relative;
+    right: 0;
+    width: 42px;
+    height: 40px;
+    left: 167px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #003AD2;
+}
+
+.vector-box {
+    display: flex;
+    width: 22px;
+    height: 22px;
+    left: 10px;
+    top: 9px;
+    position: relative;
+}
+
+.blank {
+    height: 10px;
+}
+
+.main-menu {
+    height: 490px;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            height: 49px;
+            padding-left: 40px;
+            padding-right: 38px;
+            align-items: center;
+            display: flex;
+
+            &.menu-component{
+                background-color: #003AD2;
+                margin-left: 0;
+                padding-left: 0;
+                position: relative;
+                left: 0;
+            }
+
+            .blueside{
+                background-color: #003AD2;
+                height: 26px;
+                width: 6px;
+                margin-left: -13px;
+                margin-right: 25px;
+            }
+
+            .blank{
+                padding-right: 10px;
+            }
+
+            &#dash {
+                margin-left: 13px;
+                width: 196px;
+                border-top-left-radius: 37px;
+                border-bottom-left-radius: 37px;
+                background-color: #F5F7FB;
+            }
+
+            .gap {
+                width: 38px;
+                height: 20px;
+                padding-right: 19px;
+            }
+
+            #dashboard {
+                color: #003AD2;
+            }
+
+            .component {
+                height: $menu-component-height;
+                font-size: $f-size;
+                font-family: 'proximanova', sans-serif;
+                font-weight: $f-weight;
+                color: $f-color;
+                opacity: 50%;
+                width: 59px;
+            }
+
+            #available {
+                width: 92px;
+            }
+
+            .gap-left {
+                padding-left: 24px;
+            }
+        }
+    }
+}

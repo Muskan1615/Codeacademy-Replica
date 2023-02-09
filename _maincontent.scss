@@ -1,0 +1,63 @@
+.main-content {
+    width: 100%;
+    height: 2687px;
+    display: flex;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+
+    .content-div {
+        width: 100%;
+    }
+}
+
+.div-1 {
+    display: flex;
+    padding-top: 10px;
+
+    .sales-head {
+        font-family: 'proximanova';
+        font-weight: $f-weight;
+        font-size: 24px;
+        color: $f-color;
+
+    }
+
+    .blank-space {
+        width: 54%;
+    }
+
+    .layout {
+        margin-left: 10%;
+        width: 5%;
+        background-color: #1F4173;
+        border-radius: 22px;
+        opacity: 0.05;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    &.edit-gap {
+        padding-right: 5px;
+    }
+
+    &.edit {
+        font-family: 'proximanova';
+        font-weight: $f-weight;
+        font-size: $f-size;
+        color: $f-color;
+    }
+
+    .sidetext {
+        display: flex;
+        font-family: 'proximanova';
+        font-weight: $f-weight;
+        font-size: $f-size;
+        color: $f-color;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
